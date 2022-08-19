@@ -1,5 +1,13 @@
 <div class="container chatroom">
   <h1>#<%= @chatroom.name %></h1>
+  <div id="videos"
+     data-controller="vonage"
+     data-vonage-api-key="47557071"
+     data-vonage-session-id="<%= @chatroom.vonage_session_id %>"
+     data-vonage-token="<%= @token %>"
+     data-vonage-name="<%= current_user.nickname %>"
+  >
+  </div>
 
   <div class="messages"
   data-controller="chatroom-subscription"
@@ -11,6 +19,6 @@
   </div>
   <%= simple_form_for [@chatroom, @message], remote: true do |f| %>
     <%= f.input :content, label: false, placeholder: "Say something in ##{@chatroom.name}"%>
-  <% end %>
 
+  <% end %>
 </div>
