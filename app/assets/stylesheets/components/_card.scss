@@ -1,0 +1,34 @@
+.card-room {
+  width: 18rem;
+  min-height: 9rem;
+  border-radius: 10px;
+  margin: 5px;
+  // overflow: hidden;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.884);
+    &:hover {
+      color: #000;
+      // background-color: rgba(255, 228, 196, 0.781);
+      // width: 274px;
+      // min-height: 9rem;
+    }
+  }
+}
+
+.card-login {
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+}

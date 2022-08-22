@@ -1,14 +1,18 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
 
-<h1>Chatrooms</h1>
 
-<div id="Chatrooms">
-  <% @chatrooms.each do |chatroom| %>
-    <%= render chatroom %>
-    <p>
-      <%= link_to "Show this chatroom", chatroom %>
-    </p>
-  <% end %>
+  <div id="Chatrooms">
+    <div class="row">
+      <% @chatrooms.each do |chatroom| %>
+          <div class="card card-room">
+        <%= link_to(chatroom) do %>
+            <div class="card-body">
+              <%= render chatroom %>
+            </div>
+        <% end %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+  <%= link_to "Nova sala", new_chatroom_path, class: 'btn btn-outline-dark btn-new-room' %>
 </div>
-
-<%= link_to "New chatroom", new_chatroom_path %>
